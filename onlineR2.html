@@ -1,0 +1,23 @@
+---
+title: "Online R 2"
+author: "DKW"
+output:
+  html_document:
+    self_contained: false
+---
+
+```{r, include=FALSE}
+tutorial::go_interactive()
+```
+
+Online R 2
+
+```{r}
+senic=read.csv("http://www.ics.uci.edu/~sternh/courses/210/senic.csv",header=T)
+attach(senic)
+str(senic)
+lm1=lm(stay~age,data=senic)
+summary(lm1)
+plot(age,stay)
+abline(lm1)
+```
